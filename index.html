@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <title>Email Marketing</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(249, 249, 249);
+            box-sizing: border-box;
+        }
+        /* TIPOGRAFIA Y COLORES */
+        
+        .home-data h1 {
+            color: #f1f1f1;
+        }
+        
+        .home-data p {
+            color: #f1f1f1;
+            letter-spacing: .1rem;
+        }
+        
+        ul {
+            text-decoration: none;
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        
+        ul li {
+            padding: 20px;
+        }
+        
+        button {
+            color: rgb(56, 56, 155);
+            font-size: 18px;
+            background-color: #f1f1f1;
+            padding: 16px 60px;
+            border-radius: 100px;
+            border-style: none;
+            margin-top: 1.2rem;
+        }
+        /*CONTENEDOR ESTILOS*/
+        
+        .container-page {
+            width: 100%;
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(6, 200px);
+            grid-template-areas: "header header header" "header header header" "article article article" "article article article" "article2 article2 article2" "article2 article2 article2" "article3 article3 article3" "article3 article3 article3" "download download download" "pie-page pie-page pie-page";
+            gap: 30px;
+        }
+        
+        .header {
+            height: 80vh;
+            grid-area: header;
+            background-color: rgb(56, 56, 155);
+        }
+        
+        .home-data {
+            margin-top: 1.5rem;
+            padding: 60px;
+        }
+        
+        .article {
+            padding-top: 60px;
+            grid-area: article;
+            /*background-color: red;*/
+        }
+        
+        .article,
+        .article2,
+        .article3 {
+            display: flex;
+            justify-content: space-evenly;
+        }
+        
+        .text-content h2 {
+            text-align: center;
+        }
+        
+        .text-content p {
+            text-align: center;
+        }
+        
+        .article2 {
+            grid-area: article2;
+            /*background-color: blue;*/
+        }
+        
+        .article3 {
+            grid-area: article3;
+            /*background-color: blueviolet;*/
+        }
+        
+        .download {
+            padding-top: 60px;
+            grid-area: download;
+            /*background-color: chartreuse;*/
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        .titular-descarga {
+            text-align: center;
+        }
+        
+        .container-app {
+            padding: 20px;
+        }
+        
+        .container-app img {
+            padding: 18px;
+        }
+        
+        .pie-page {
+            grid-area: pie-page;
+            background-color: #cccccc;
+            text-align: center;
+        }
+        /* Menu de navegacion */
+        
+        .logo img {
+            width: 170px;
+            height: 40.5px;
+        }
+        
+        .content-description img {
+            width: 180px;
+            height: 40px;
+        }
+        /* RESPONSIVE DESIGN */
+        
+        @media screen and (min-width: 360px) and (max-width: 575px) {
+            .logo img {
+                width: 80px;
+                height: 20.5px;
+            }
+            button {
+                color: rgb(56, 56, 155);
+                font-size: 18px;
+                background-color: #f1f1f1;
+                padding: 16px 60px;
+                border-radius: 100px;
+                border-style: none;
+                margin-top: 0;
+            }
+            .container-page {
+                width: 100%;
+                height: auto;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(6, 200px);
+                grid-template-areas: "header header header" "header header header" "article article article" "article article article" "article article article" "article2 article2 article2" "article2 article2 article2" "article2 article2 article2" "article3 article3 article3" "article3 article3 article3" "article3 article3 article3" "download download download" "pie-page pie-page pie-page";
+                gap: 30px;
+            }
+            .article {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .article2 {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .article3 {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .download {
+                grid-area: download;
+                /*background-color: chartreuse;*/
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+
+    <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
+</head>
+
+<body>
+    <div class="container-page">
+        <header class="header">
+            <div class="home-data">
+                <div class="logo">
+                    <img src="https://cdn.templates.unlayer.com/assets/1594372558139-sss.png" alt="logo">
+                </div>
+                <h1>Surprise!</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, facere laudantium! <br> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis, illo harum.
+                    <br> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+                <button type="button">Get started</button>
+            </div>
+        </header>
+        <article class="article">
+            <div class="text-content" data-aos="fade-up">
+                <h2>Exciting Feature One</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam suscipit, quasi minus in assumenda animi odit! <br> Excepturi nulla praesentium ut cumque sed impedit ullam temporibus veniam. <br> Qui at quisquam eligendi. Lorem, ipsum
+                    dolor sit amet consectetur adipisicing elit. <br> Nisi, cupiditate! Amet! Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+            <div class="image-content" data-aos="fade-up"><img src="https://cdn.templates.unlayer.com/assets/1594373622731-1.png" alt="articulo 1"></div>
+        </article>
+        <article class="article2">
+            <div class="text-content" data-aos="fade-up">
+                <h2>Exciting Feature Two</h2>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam suscipit, quasi minus in assumenda animi odit! <br> Excepturi nulla praesentium ut cumque sed impedit ullam temporibus veniam. <br> Qui at quisquam eligendi. Lorem, ipsum
+                    dolor sit amet consectetur adipisicing elit. <br> Nisi, cupiditate! Amet! Lorem ipsum dolor sit amet consectetur.
+                </p>
+            </div>
+            <div class="image-content" data-aos="fade-up">
+                <img src="https://cdn.templates.unlayer.com/assets/1594374243879-3.png" alt="articulo 2">
+            </div>
+        </article>
+        <article class="article3">
+            <div class="text-content" data-aos="fade-up">
+                <h2>Exciting Feature Three</h2>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam suscipit, quasi minus in assumenda animi odit! <br> Excepturi nulla praesentium ut cumque sed impedit ullam temporibus veniam. <br> Qui at quisquam eligendi. Lorem, ipsum
+                    dolor sit amet consectetur adipisicing elit. <br> Nisi, cupiditate! Amet! Lorem ipsum dolor sit amet consectetur.
+                </p>
+            </div>
+            <div class="image-content" data-aos="fade-up">
+                <img src="https://cdn.templates.unlayer.com/assets/1594374641707-2.png" alt="articulo 3">
+            </div>
+        </article>
+        <section class="download">
+            <div class="titular-descarga" data-aos="fade-right">
+                <h2>Ready?</h2>
+                <h3>Download and Enjoy!</h3>
+            </div>
+            <div class="container-app" data-aos="fade-up">
+                <img src="https://cdn.templates.unlayer.com/assets/1594374832505-C02LqaU.png" alt="">
+                <img src="https://cdn.templates.unlayer.com/assets/1594374849368-rYzrGto.png" alt="">
+            </div>
+        </section>
+        <footer class="pie-page">
+            <h3>Stay Connected</h3>
+
+            <ul>
+                <li>
+                    <box-icon type="logo" name="facebook-circle"></box-icon>
+                </li>
+                <li>
+                    <box-icon type="logo" name="instagram-alt"></box-icon>
+                </li>
+
+                <li>
+                    <box-icon type="logo" name="youtube"></box-icon>
+                </li>
+                <li>
+                    <box-icon type="logo" name="twitter"></box-icon>
+                </li>
+            </ul>
+            <div class="content-description">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, neque tempore. <br> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus itaque incidunt dignissimos?</p>
+                <img src="https://cdn.templates.unlayer.com/assets/1594375117213-111.png" alt="logo">
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+        });
+    </script>
+</body>
+
+</html>
